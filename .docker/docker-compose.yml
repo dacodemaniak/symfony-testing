@@ -21,6 +21,7 @@ services:
             context: ./php
             args:
                 TIMEZONE: ${TIMEZONE}
+        container_name: php
         volumes:
             - ../:/var/www/symfony:cached
             - symfony_app_var:/var/www/symfony/var
