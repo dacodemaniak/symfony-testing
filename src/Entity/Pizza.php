@@ -25,6 +25,10 @@ class Pizza implements MenuInterface
     private ?string $name = null;
 
 
+    public function getId(): ?int {
+        return $this->id;
+    }
+    
     public function getDiameter(): ?int
     {
         return $this->diameter;

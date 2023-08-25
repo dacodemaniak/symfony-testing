@@ -19,5 +19,12 @@ final class PizzaService {
     public function getById(int $id): Pizza {
         return $this->_repository->find($id);
     }
+    
+    public function add(Pizza $pizza): Pizza {
+        $this->_em->persist($pizza);
+        $this->_em->flush();
+        
+        return $pizza;
+    }
 }
 
